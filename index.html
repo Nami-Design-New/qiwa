@@ -1,0 +1,241 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title -->
+  <title> التحقق من الشهادات | قوى </title>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="img/fav.svg">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/fontawesome.min.css">
+  <!-- select2 -->
+  <link rel="stylesheet" href="css/select2.min.css">
+  <!-- Custom style  -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!--  navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top ">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.svg">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link " href="#"> التسجيل </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"> تسجيل الدخول </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#"> <i class="fal fa-globe me-1"></i> English </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- end navbar -->
+  <!-- content -->
+  <!-- fixed BG -->
+  <div class="sideBackground"></div>
+  <!-- fixed BG -->
+  <content>
+    <div class="container">
+      <!-- breadcrumbs  -->
+      <section class="breadcrumbs ">
+        <ul>
+          <li>
+            <a href="#!">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              الأدوات والحاسبات
+            </a>
+          </li>
+          <li>
+            <a href="#!">
+              التحقق من الشهادات
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!-- end breadcrumbs  -->
+      <!-- certificate -->
+      <section class="certificate">
+        <!-- info -->
+        <div class="head">
+          <img src="img/certificate.svg" alt="">
+          <h1> التحقق من الشهادات </h1>
+        </div>
+        <!-- inner -->
+        <div class="inner col-6">
+          <p>
+            خدمة تقدمها منصة قوى للاستعلام عن الشهادات الصادرة من الخدمات كالاستعلام عن صحة وحالة شهادة السعودة
+            للمنشأة،
+            بهدف رفع مستوى الوعي والموثوقية.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 p-0">
+            <!-- form -->
+            <form action="">
+              <!-- input -->
+              <div class="form-group">
+                <label for="certificateType"> نوع الشهادة </label>
+                <select name="" id="certificateType" class="select2">
+                  <option value="0" selected disabled> اختر نوع الشهادة </option>
+                  <option value="1"> شهادة السعودة </option>
+                </select>
+              </div>
+              <!-- input -->
+              <div class="form-group">
+                <label for="certificateType"> رقم المنشأه </label>
+                <div class="form-outline">
+                  <input type="text" id="form12" class="form-control" placeholder="  " />
+                  <label class="form-label" for="form12"> 1-12345 </label>
+                </div>
+              </div>
+              <!-- input -->
+              <div class="form-group">
+                <label for="certificateType"> رقم الشهادة </label>
+                <div class="form-outline">
+                  <input type="text" id="form12" class="form-control" placeholder="  " />
+                  <label class="form-label" for="form12"> 123456-12345678 </label>
+                </div>
+              </div>
+              <!-- input -->
+              <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"> </div>
+              </div>
+              <!-- input -->
+              <button type="submit" class="btn"> تحقق </button>
+            </form>
+          </div>
+          <div class="col-md-6 p-0 ">
+            <!-- result -->
+            <section class="result">
+              <h2> نتيجة التحقق من الشهادة </h2>
+              <div class="status checked">
+                <h4>حالة الشهادة </h4>
+                <p> <span></span> نشط </p>
+              </div>
+              <div class="status">
+                <h4> رقم الشهادة </h4>
+                <p> 144171-56916095 </p>
+              </div>
+              <div class="status">
+                <h4> اسم المنشأة </h4>
+                <p> مؤسسة ثقه للتسويق الإلكتروني </p>
+              </div>
+              <div class="status">
+                <h4> رقم المنشأه </h4>
+                <p> 1930923 - 1 </p>
+              </div>
+              <div class="status">
+                <h4> تاريخ الإصدار </h4>
+                <p> ٢٠٢٢/٠٦/٢٨ </p>
+              </div>
+              <div class="status">
+                <h4> تاريخ الانتهاء </h4>
+                <p> ٢٠٢٢/٠٩/٢٦ </p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </content>
+  <!-- end content -->
+  <!-- footer -->
+  <footer>
+    <div class="inner">
+      <div class="container">
+        <h3 class="title">مركز المعرفة</h3>
+        <div class="content">
+          <ul class="menu">
+            <li>
+              <a href="">نظام العمل السعودي</a>
+            </li>
+            <li>
+              <a href="">نطاقات</a>
+            </li>
+            <li>
+              <a href="">خدمات قوى</a>
+            </li>
+            <li>
+              <a href="">تسهيل أداء الأعمال</a>
+            </li>
+            <li>
+              <a href="">تقارير سوق العمل في المملكة</a>
+            </li>
+          </ul>
+          <img src="img/logo-w.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+
+        <div class="media">
+          <ul class="links">
+            <li>
+              <a href="#!"> © </a>
+            </li>
+            <li>
+              <a href="#!"> الشروط </a>
+            </li>
+            <li>
+              <a href="#!"> الخصوصية </a>
+            </li>
+          </ul>
+
+          <div class="logos">
+            <a href="#!">
+              <img class="logosImg" src="img/HRSD.png">
+            </a>
+            <a href="#!">
+              <img class="logosImg" src="img/Takamol.png">
+            </a>
+          </div>
+          <div class="socials">
+            <a href="tel:920000105"> 920000105 </a>
+            <a href="https://twitter.com/qiwa_sa"> <i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.youtube.com/qiwa_sa"> <i class="fa-brands fa-youtube"></i> </a>
+            <a href="https://www.linkedin.com/company/qiwa-sa"> <i class="fa-brands fa-linkedin"></i> </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--/////////////////////////////JavaScript/////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/select2.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="js/Custom.js"></script>
+</body>
+
+</html>
