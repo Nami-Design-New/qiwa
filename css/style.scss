@@ -262,9 +262,9 @@ content {
   .container {
     padding: 0px 26px;
 
-    @media (max-width: 480px) {
-      padding: 0px 24px 0 10px;
-    }
+    // @media (max-width: 480px) {
+    //   padding: 0px 24px 0 10px;
+    // }
   }
 }
 
@@ -553,9 +553,9 @@ footer {
   .container {
     padding: 0px 26px;
 
-    @media (max-width: 480px) {
-      padding: 0px 24px 0 10px;
-    }
+    // @media (max-width: 480px) {
+    //   padding: 0px 24px 0 10px;
+    // }
   }
 
   .inner {

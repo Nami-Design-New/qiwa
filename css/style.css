@@ -265,12 +265,6 @@ content .container {
   padding: 0px 26px;
 }
 
-@media (max-width: 480px) {
-  content .container {
-    padding: 0px 24px 0 10px;
-  }
-}
-
 .breadcrumbs {
   margin-top: 111px;
 }
@@ -557,12 +551,6 @@ footer {
 
 footer .container {
   padding: 0px 26px;
-}
-
-@media (max-width: 480px) {
-  footer .container {
-    padding: 0px 24px 0 10px;
-  }
 }
 
 footer .inner {
