@@ -265,6 +265,12 @@ content .container {
   padding: 0px 26px;
 }
 
+@media (max-width: 480px) {
+  content .container {
+    padding: 0px 24px 0 10px;
+  }
+}
+
 .breadcrumbs {
   margin-top: 111px;
 }
@@ -333,19 +339,15 @@ content .container {
   color: #000;
 }
 
-.certificate .head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 4px 14px;
-  margin-bottom: 8px;
-}
-
-.certificate .head img {
-  height: 45px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  margin-left: 6px;
+@media (max-width: 480px) {
+  .breadcrumbs ul li {
+    padding-right: 12px;
+    padding-left: 4px;
+    font-size: 12px;
+  }
+  .breadcrumbs ul li::before {
+    font-size: 12px;
+  }
 }
 
 .certificate .head h1 {
@@ -353,6 +355,19 @@ content .container {
   font-weight: 500;
   color: #000;
   margin-bottom: 5px;
+  position: relative;
+  line-height: 58px;
+}
+
+.certificate .head h1::before {
+  background-image: url("../img/certificate.svg");
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+  content: "";
 }
 
 .certificate .inner p {
@@ -366,6 +381,12 @@ content .container {
   max-width: 470px;
   padding-bottom: 80px;
   padding-top: 39px;
+}
+
+@media (max-width: 480px) {
+  .certificate form {
+    padding-top: 70px;
+  }
 }
 
 .certificate form label {
@@ -469,6 +490,18 @@ content .container {
   margin-bottom: 70px;
 }
 
+@media (max-width: 1024px) {
+  .result {
+    margin: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .result {
+    padding: 20px;
+  }
+}
+
 .result h2 {
   color: #0f0f4c;
   font-size: 25px;
@@ -526,6 +559,12 @@ footer .container {
   padding: 0px 26px;
 }
 
+@media (max-width: 480px) {
+  footer .container {
+    padding: 0px 24px 0 10px;
+  }
+}
+
 footer .inner {
   padding: 34px 0 25px;
   background: #134359;
@@ -564,6 +603,12 @@ footer .inner .content .menu {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 120px;
+}
+
+@media (max-width: 480px) {
+  footer .inner .content .menu {
+    height: auto;
+  }
 }
 
 footer .inner .content .menu li {
@@ -640,7 +685,6 @@ footer .copyrights .media .logos a img {
   height: 75px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-right: 10px;
 }
 
 footer .copyrights .media .logos a:last-child img {
@@ -673,5 +717,18 @@ footer .copyrights .media .socials a:hover {
 
 footer .copyrights .media .socials a i {
   font-size: 26px;
+}
+
+@media (max-width: 480px) {
+  footer .copyrights .media {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .copyrights .media .socials,
+  footer .copyrights .media .logos,
+  footer .copyrights .media .links {
+    margin: 5px 0 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
