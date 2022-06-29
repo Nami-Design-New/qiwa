@@ -483,6 +483,21 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
+.alert {
+  background-color: #F44236;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.alert i {
+  cursor: pointer;
+}
+
 content {
   position: relative;
   z-index: 2;
