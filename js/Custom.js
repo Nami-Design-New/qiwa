@@ -13,4 +13,12 @@ $(document).ready(function () {
       $(".navbar").removeClass("navAnimate");
     };
   });
+
+
+  $('.sideBtn').click(function () {
+    $(this).toggleClass('active');
+    $('.sideMenu').toggleClass('active');
+
+  });
+
 });

@@ -196,12 +196,10 @@ span.select2.select2-container.select2-container--default {
   @media (max-width: 992px) {
     background: #ffffff;
     padding: 10px;
-
-
   }
+
   @media (max-width: 480px) {
     padding: 10px;
-
   }
 
   @media (max-width: 480px) {
@@ -250,37 +248,184 @@ span.select2.select2-container.select2-container--default {
   .collapse {
     padding-left: 4px;
   }
-
-
-
 }
 
 .navAnimate {
   background-color: #efeff7;
   padding: 8.5px 0;
   box-shadow: 0 0 30px 1.26px #00000042;
+
   @media (max-width: 480px) {
     padding: 10px;
   }
 }
 
-.sideBackground {
-  background-color: rgb(216, 216, 229);
-  height: 1098px;
-  clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
-  left: 0;
-  right: unset;
-  width: 510px;
-  position: absolute;
-  top: -70px;
-  // transform: scale(-1);
-  opacity: .45;
-  z-index: 1;
+.sideBtn {
+  position: relative;
+  width: 34px;
+  height: 24px;
+  padding: 5px;
+  margin-left: -5px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform .3s;
+  z-index: 2;
 
-  @media (max-width:1024px) {
-    display: none;
+  span {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $mainColor;
+    margin: 4px 0;
+    transition: width .3s, transform .5s, opacity .3s;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      width: 10px;
+      top: 7px;
+    }
+
+    &:nth-child(3) {
+      width: 16px;
+      bottom: 0;
+    }
+  }
+
+  &:not(.active):hover span:first-child {
+    width: 16px;
+  }
+
+  &:not(.active):hover span:nth-child(2) {
+    width: 20px;
+  }
+
+  &.active {
+    span {
+      background-color: #fff !important;
+
+      &:first-child {
+        transform: rotate(45deg);
+        top: 8px;
+        width: 20px;
+      }
+
+      &:nth-child(2) {
+        width: 0;
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+        top: 8px;
+        width: 20px;
+      }
+    }
   }
 }
+
+.sideMenu {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: auto;
+  top: 0;
+  height: 100%;
+  background-color: rgba(19, 67, 89, 0.95);
+  padding: 50px 24px;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  width: 100%;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  .sideMenuInner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    height: 100%;
+
+    .sideMenuLink {
+      position: relative;
+      display: block;
+      font-size: 14px;
+      line-height: 26px;
+      color: #fff;
+      font-weight: 700;
+      padding: 5px 0;
+      transition: padding 0.3s;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: auto;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #50a1a3;
+        transition: width 0.3s;
+      }
+
+      &:hover {
+        padding-left: 35px;
+        padding-right: 0;
+
+        &:before {
+          width: 25px;
+        }
+      }
+
+      &:first-of-type,
+      &:not(.visible)+.visible {
+        margin-top: auto;
+      }
+    }
+
+    .sideMenuSocials {
+      align-self: flex-end;
+      margin-top: auto;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: #fff;
+          font-size: 22px;
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+      }
+    }
+
+    .language {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 10px 4px;
+      color: #fff;
+      font-size: 12px;
+      line-height: 22px;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
 
 content {
   position: relative;

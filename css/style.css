@@ -266,24 +266,199 @@ span.select2.select2-container.select2-container--default {
   }
 }
 
-.sideBackground {
-  background-color: #d8d8e5;
-  height: 1098px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
-  left: 0;
-  right: unset;
-  width: 510px;
-  position: absolute;
-  top: -70px;
-  opacity: .45;
-  z-index: 1;
+.sideBtn {
+  position: relative;
+  width: 34px;
+  height: 24px;
+  padding: 5px;
+  margin-left: -5px;
+  margin-right: 10px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  z-index: 2;
 }
 
-@media (max-width: 1024px) {
-  .sideBackground {
-    display: none;
-  }
+.sideBtn span {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #134359;
+  margin: 4px 0;
+  -webkit-transition: width .3s, opacity .3s, -webkit-transform .5s;
+  transition: width .3s, opacity .3s, -webkit-transform .5s;
+  transition: width .3s, transform .5s, opacity .3s;
+  transition: width .3s, transform .5s, opacity .3s, -webkit-transform .5s;
+}
+
+.sideBtn span:first-child {
+  top: 0;
+}
+
+.sideBtn span:nth-child(2) {
+  width: 10px;
+  top: 7px;
+}
+
+.sideBtn span:nth-child(3) {
+  width: 16px;
+  bottom: 0;
+}
+
+.sideBtn:not(.active):hover span:first-child {
+  width: 16px;
+}
+
+.sideBtn:not(.active):hover span:nth-child(2) {
+  width: 20px;
+}
+
+.sideBtn.active span {
+  background-color: #fff !important;
+}
+
+.sideBtn.active span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 8px;
+  width: 20px;
+}
+
+.sideBtn.active span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+.sideBtn.active span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 8px;
+  width: 20px;
+}
+
+.sideMenu {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: auto;
+  top: 0;
+  height: 100%;
+  background-color: rgba(19, 67, 89, 0.95);
+  padding: 50px 24px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  width: 100%;
+}
+
+.sideMenu.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.sideMenu .sideMenuInner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.sideMenu .sideMenuInner .sideMenuLink {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 700;
+  padding: 5px 0;
+  -webkit-transition: padding 0.3s;
+  transition: padding 0.3s;
+}
+
+.sideMenu .sideMenuInner .sideMenuLink:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #50a1a3;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.sideMenu .sideMenuInner .sideMenuLink:hover {
+  padding-left: 35px;
+  padding-right: 0;
+}
+
+.sideMenu .sideMenuInner .sideMenuLink:hover:before {
+  width: 25px;
+}
+
+.sideMenu .sideMenuInner .sideMenuLink:first-of-type,
+.sideMenu .sideMenuInner .sideMenuLink:not(.visible) + .visible {
+  margin-top: auto;
+}
+
+.sideMenu .sideMenuInner .sideMenuSocials {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: auto;
+}
+
+.sideMenu .sideMenuInner .sideMenuSocials li {
+  display: inline-block;
+}
+
+.sideMenu .sideMenuInner .sideMenuSocials li a {
+  color: #fff;
+  font-size: 22px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.sideMenu .sideMenuInner .language {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.sideMenu .sideMenuInner .language a {
+  color: #fff;
 }
 
 content {

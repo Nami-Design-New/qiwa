@@ -23,16 +23,13 @@
 
 <body>
   <!--  navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top ">
+  <nav class="navbar navbar-expand-md fixed-top ">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="img/logo.svg">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- links in md media -->
+      <div class="d-none d-md-block">
         <ul class="navbar-nav ms-auto ">
           <li class="nav-item">
             <a class="nav-link " href="#"> التسجيل </a>
@@ -44,6 +41,40 @@
             <a class="nav-link " href="#"> <i class="fal fa-globe me-1"></i> English </a>
           </li>
         </ul>
+      </div>
+      <!-- toggle btn -->
+      <div class="sideBtn d-md-none ">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- side menu -->
+      <div class="sideMenu ">
+        <div class="sideMenuInner">
+          <a href="#!" target="_blank" class="sideMenuLink ">التسجيل</a>
+          <a href="#!" target="_blank" class="sideMenuLink ">تسجيل الدخول</a>
+          <div class="language">
+            <i class="fal fa-globe me-1"></i>
+            <a href="#!"> English </a>
+          </div>
+          <ul class="sideMenuSocials">
+            <li>
+              <a href="#!">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#!">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -190,7 +221,6 @@
     </div>
     <div class="copyrights">
       <div class="container">
-
         <div class="media">
           <ul class="links">
             <li>
@@ -203,7 +233,6 @@
               <a href="#!"> الخصوصية </a>
             </li>
           </ul>
-
           <div class="logos">
             <a href="#!">
               <img class="logosImg" src="img/HRSD.png">
