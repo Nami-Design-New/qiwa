@@ -428,6 +428,25 @@ span.select2.select2-container.select2-container--default {
 }
 
 
+.sideBackground {
+  background-color: rgb(216, 216, 229);
+  height: 1098px;
+  clip-path: polygon(0 0, 100% 0, 68% 100%, 0 100%);
+  left: 0;
+  right: unset;
+  width: 510px;
+  position: absolute;
+  top: -70px;
+  // transform: scale(-1);
+  opacity: .45;
+  z-index: 1;
+
+  @media (max-width:1024px) {
+    display: none;
+  }
+}
+
+
 content {
   position: relative;
   z-index: 2;
